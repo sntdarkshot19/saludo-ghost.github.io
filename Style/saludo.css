@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Josefin+Slab:wght@200&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Slab", serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: aliceblue;
+    min-height: 100vh;
+    background: #0c192c;
+}
+
+.poema {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubble {
+    position: relative;
+    display: flex;
+}
+
+.bubble span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4798ab;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4599ac44, 0 0 50px #4798ab, 0 0 100px #4798ab;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubble span:nth-child(even) {
+    background: #9c264f;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #9c264f, 0 0 100px #9c264f;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.poem {
+    margin: 100px auto;
+    background: #00000053;
+    padding: 50px;
+    width: 700px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 0 10px #415c6244, 0 0 50px #346671, 0 0 100px #399eb4;
+    z-index: 2;
+}
+
+.poem h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px #e8e8e8;
+}
+
+.poem p {
+    font-size: 22px;
+    text-shadow: 0 0 10px #e8e8e8;
+}
